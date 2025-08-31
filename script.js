@@ -84,6 +84,16 @@ function showDetails() {
   let username = document.getElementById("username").value;
   let password = document.getElementById("password").value;
 
+  function checkEmail() {
+  let email = document.getElementById("email").value.trim();
+
+  if (email.toLowerCase().endsWith("@gmail.com")) {
+    alert("✅ Valid Gmail address");
+  } else {
+    alert("❌ Please enter a Gmail address ending with @gmail.com");
+  }
+}
+  
   if (username1.length > 8) {
     alert("Your name not have more than 8 characters long.");
     return;
@@ -95,7 +105,7 @@ function showDetails() {
   }
 
   if (username === "" || password === "" || username1 === "") {
-    alert("Please enter username, password and your name!");
+    alert("Please enter e-mail, password and your name!");
     return;
   }
 
@@ -109,3 +119,4 @@ function showDetails() {
 
   document.getElementById("welcome").innerText = username1;
 }
+
