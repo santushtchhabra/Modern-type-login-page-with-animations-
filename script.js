@@ -89,7 +89,7 @@ function showDetails() {
   let email = document.getElementById("username").value.trim();
 
   if (email.endsWith("@gmail.com")) {
-    alert("✅ Valid Gmail address");
+    console.log("✅ Valid Gmail address");
     return true;  // success
   } else {
     alert("❌ Please enter a Gmail address ending with @gmail.com");
@@ -122,3 +122,4 @@ function showDetails() {
 
   document.getElementById("welcome").innerText = username1;
 }
+
