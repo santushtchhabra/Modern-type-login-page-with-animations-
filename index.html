@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <svg viewBox="0 0 500 200" width="600" height="500">
+        <!-- Invisible curve -->
+        <path
+          id="curve"
+          d="M 35 140 A 250 80 0 0 1 450 150"
+          fill="transparent"
+          stroke="none"
+        />
+
+        <!-- Text along the curve -->
+        <text id="text">
+          <textPath href="#curve" startOffset="50%" text-anchor="middle">
+            HELLO USER
+          </textPath>
+        </text>
+      </svg>
+      <!-- Step 1: Only Login Button -->
+      <div id="start">
+        <button class="btn login" onclick="showForm()">Login</button>
+      </div>
+
+      <!-- Step 2: Login Form -->
+      <div id="formBox" class="hidden">
+        <h2 class="hidden2">Login</h2>
+        <input type="text" id="username1" placeholder="Enter Your Name" />
+        <input type="text" id="username" placeholder="Enter Username" />
+        <input type="password" id="password" placeholder="Enter Password" />
+        <button class="btn1" onclick="showDetails()">Submit</button>
+      </div>
+
+      <!-- Step 3: Show Entered Details -->
+      <div id="details" class="hidden">
+        <div id="done" class="done">
+          <div>Welcome <span id="welcome"></span></div>
+        </div>
+        <h3>Your Details:</h3>
+        <p><strong>Your Name:</strong> <span id="showName"></span></p>
+        <p><strong>Username:</strong> <span id="showUser"></span></p>
+        <p style="margin-bottom: 50px;"><strong>Password:</strong> <span id="showPass"></span></p>
+        <div class="arrow">
+          <a href="https://www.google.com"><img class="ARROW" src="arrow-square-right-svgrepo-com.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
